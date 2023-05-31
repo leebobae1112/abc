@@ -1,0 +1,452 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("../webfonts/GowunDodum-Regular.woff") format("woff");
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+body {
+  font-family: sans-serif;
+  color: #3a3a3a;
+}
+.back {
+  width: 100%;
+  height: 550px;
+}
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 3;
+}
+header:hover {
+  /* background: #fff; */
+}
+header .head {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .head .logo {
+  width: 226px;
+  line-height: 115px;
+}
+header .logo img {
+  width: 200px;
+  vertical-align: middle;
+}
+header .menu {
+  width: 700px;
+  position: relative;
+  display: flex;
+}
+header .menu > li {
+  position: relative;
+  width: 25%;
+  text-align: center;
+}
+header .menu li:nth-child(2) {
+  padding-left: 10px;
+}
+/* header .sub {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 4;
+  height: 120px;
+} */
+header .menu > li > a:hover {
+  color: #6464ab;
+}
+/* header .submenu .sub li a {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+} */
+/* header .menu li {
+    z-index: 1;
+} */
+header .menu li a,
+header .join li a {
+  color: #fff;
+}
+header .menu li a {
+  font-size: 18px;
+  font-weight: bold;
+}
+header .join {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+header .join li a {
+  margin: 0 5px;
+}
+header .join li:nth-child(4),
+header .join li:nth-child(5) {
+  font-size: 13px;
+}
+header .submenu {
+  position: absolute;
+  width: 100%;
+  /* height: 250px; */
+  height: 0;
+  top: 115px;
+  overflow: hidden;
+  transition: height 0.5s;
+  /* background: rgba(220, 220, 230, 0.95); */
+  background: rgba(255, 255, 255, 0.95);
+}
+header .submenu .subs {
+  width: 1200px;
+  height: 250px;
+  margin: 0 auto;
+  /* opacity: 0; */
+}
+header .submenu .subs .inner {
+  display: flex;
+  width: 700px;
+  margin: 0 auto;
+  transform: translateX(14px);
+}
+header .submenu .subs .inner > li {
+  flex: 1 1 25%;
+  text-align: center;
+  line-height: 50px;
+}
+header .submenu .subs .inner > li > a {
+  display: block;
+  width: 100%;
+}
+header .submenu .subs .inner li a {
+  display: block;
+}
+header .submenu .subs .inner li a:hover {
+  background: #a398b5;
+  color: #fff;
+}
+
+.visual .inner {
+  display: flex;
+  justify-content: center;
+  /* width: 1200px;
+  margin: 0 auto; */
+}
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  margin-top: 150px;
+}
+
+.bg_01 {
+  background: linear-gradient(#a398b5 0.5%, #d3d1d6 21%);
+}
+.bg_02 {
+  background: linear-gradient(#b0aa9d 0.5%, #e9e1d1 21%);
+}
+.bg_03 {
+  background: linear-gradient(#466085 0.5%, #bcd1e1 21%);
+}
+.bg_04 {
+  background: linear-gradient(#5f8a93 0.5%, #cbdedd 21%);
+}
+.btn_slide {
+  position: absolute;
+  width: 1200px;
+  height: 50px;
+  left: 50%;
+  top: 68%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.con {
+  width: 1200px;
+  margin: 100px auto;
+}
+.con ul {
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.con ul li {
+  margin-right: 10px;
+}
+.con ul li:first-child {
+  font-size: 24px;
+  font-family: "GowunDodum-Regular";
+  font-weight: bold;
+}
+.con ul li:nth-child(2) {
+  background: #d3d1d6;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+.con ul li:last-child a {
+  background: #6464ab;
+  color: #fff;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+#product {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#product .pro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#product .pro > a {
+  display: flex;
+  height: 175px;
+  justify-content: center;
+}
+#product .btn {
+  position: absolute;
+  width: 100%;
+  height: 34px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+#product .pro .text {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  margin-top: 30px;
+}
+#product .pro p {
+  font-size: 14px;
+  font-weight: bold;
+}
+#product .pro p:nth-of-type(2) {
+  font-size: 12px;
+}
+#product .pro p span {
+  color: #6464ab;
+  font-weight: bold;
+}
+.owl-theme .owl-nav {
+  width: 26px;
+  height: 34px;
+}
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  position: absolute;
+  width: 26px;
+  height: 34px;
+  top: 50%;
+
+  text-indent: -9999px;
+  z-index: 5;
+}
+.owl-carousel .owl-nav button.owl-prev span {
+  left: 0px;
+  background-image: url(../images/left.png) !important;
+}
+.owl-carousel .owl-nav button.owl-next span {
+  right: 0px;
+  background-image: url(../images/right.png);
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #6464ab;
+}
+.plus {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plus a {
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px 60px;
+}
+#wrap > .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  margin: 100px auto 30px;
+  font-size: 24px;
+  font-family: "GowunDodum-Regular";
+  font-weight: bold;
+}
+#wrap > .text p {
+  margin-left: 50px;
+}
+.gudok_menu ul {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 150px 150px 150px;
+  padding: 20px 0 20px 0;
+}
+.gudok_menu ul li a img {
+  width: 60px;
+}
+.gudok_menu ul li a span {
+  font-weight: bold;
+}
+.gudok_text {
+  width: 1280px;
+  margin: 100px auto 80px;
+  padding-left: 200px;
+}
+.gudok_img {
+  width: 1280px;
+  margin: 0 auto;
+}
+.gudok_img ul {
+  display: grid;
+  grid-template-columns: 320px 320px 320px 320px;
+  justify-items: center;
+}
+.gudok_img ul li {
+  position: relative;
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  transition: all 1s;
+  background-size: 100%;
+  background-position: center;
+  border-radius: 15px;
+}
+.gudok_img ul li:first-child {
+  background-image: url(../images/april_best.png);
+}
+.gudok_img ul li:nth-child(2) {
+  background-image: url(../images/camping_gudok.png);
+}
+.gudok_img ul li:nth-child(3) {
+  background-image: url(../images/book_gudok.png);
+}
+.gudok_img ul li:nth-child(4) {
+  background-image: url(../images/concept_gudok.png);
+}
+.gudok_img ul li a img {
+  width: 250px;
+  border-radius: 15px;
+}
+.gudok_img ul li p {
+  position: absolute;
+  top: 260px;
+  width: 100%;
+  text-align: center;
+}
+.gudok_img ul li:hover {
+  background-size: 110%;
+}
+.gudok_life {
+  display: grid;
+  grid-template-columns: 400px;
+  justify-content: center;
+  width: 1280px;
+  margin: 150px auto;
+}
+.gudok_life .life {
+  position: relative;
+}
+.gudok_life .life p {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  font-family: "GowunDodum-Regular";
+}
+.gudok_life .life p span {
+  font-size: 24px;
+  font-weight: bold;
+}
+.point {
+  width: 1280px;
+  margin: 0 auto;
+}
+.point .gudok_01 {
+  position: relative;
+  padding: 0 30px 50px;
+}
+.point .gudok_01 img {
+  width: 500px;
+  border-radius: 15px;
+}
+.point .gudok_01 p {
+  position: absolute;
+  top: 120px;
+  right: 200px;
+}
+.point .gudok_01 p span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.gudok_bg {
+  position: relative;
+  background-image: url(../images/bg_2.png);
+}
+.gudok_bg .point2 {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+.gudok_bg .point2 img {
+  width: 500px;
+  border-radius: 15px;
+}
+.gudok_bg .point2 .gudok_02 {
+  padding: 40px 30px 30px 30px;
+}
+.gudok_bg .point2 .gudok_02 p {
+  position: absolute;
+  top: 150px;
+  right: 280px;
+}
+.gudok_bg .point2 .gudok_02 p,
+.gudok_bg .point2 .gudok_03 p {
+  color: #d9d9d9;
+}
+.gudok_bg .point2 .gudok_02 p span,
+.gudok_bg .point2 .gudok_03 p span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.gudok_bg .point2 .gudok_03 {
+  padding: 20px 30px 30px 30px;
+}
+.gudok_bg .point2 .gudok_03 p {
+  position: absolute;
+  top: 530px;
+  right: 300px;
+}

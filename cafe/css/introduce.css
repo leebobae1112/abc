@@ -1,0 +1,73 @@
+@charset "utf-8";
+#image {
+  width: 100%;
+  height: 500px;
+  background: url(../images/train_track.jpg) center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+#introduce {
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto;
+}
+#introduce ul {
+  display: flex;
+  justify-content: space-around;
+}
+#introduce ul li img {
+  width: 100px;
+}
+#map {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#map iframe {
+  width: 100%;
+  height: 700px;
+}
+#way {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  margin: 100px auto;
+}
+#way_01,
+#way_02,
+#way_03 {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: #f9b248;
+  border-radius: 10px;
+}
+#way h2 {
+  position: absolute;
+  left: 130px;
+  top: 70px;
+}
+#way p {
+  width: 100%;
+  position: absolute;
+  top: 340px;
+  text-align: center;
+}
+#way .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+#way .circle img {
+  margin: 27px 0 0 32px;
+}
