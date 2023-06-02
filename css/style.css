@@ -91,6 +91,9 @@ body {
   font-size: 20px;
   color: #219c89;
   font-weight: bold;
+}
+#profile li:first-child,
+#profile li:nth-child(2) {
   margin-bottom: 10px;
 }
 #profile li:nth-child(3) {
@@ -103,6 +106,9 @@ body {
 }
 #text li {
   margin-bottom: 10px;
+}
+#text li a {
+  color: #333;
 }
 #mokup,
 #mokup_02 {
