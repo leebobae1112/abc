@@ -22,14 +22,14 @@ body {
   color: #494645;
 }
 #wrap {
-  width: ;
+  width: 100%;
 }
 #head {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100px;
-  background: #cbdedd;
+  background: #015958;
   z-index: -10;
 }
 #flower {
@@ -110,10 +110,117 @@ body {
 #text li a {
   color: #333;
 }
+.skill_progress {
+  margin: 0 auto 70px;
+  width: 500px;
+  padding: 20px;
+  background-color: #015958;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 20px 30px #000000e0;
+}
+.skill_progress h1 {
+  text-align: center;
+}
+.item p {
+  overflow: hidden;
+  margin: 5px 0;
+}
+.item p span:nth-child(1) {
+  float: left;
+}
+.item p span:nth-child(2) {
+  float: right;
+}
+.progress {
+  border: 1px solid #6cd4c4;
+  padding: 5px;
+  border-radius: 3px;
+}
+.progress_level {
+  height: 10px;
+  background: linear-gradient(to right, rgb(53, 101, 231), rgb(211, 70, 140));
+  animation-name: ani;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+@keyframes ani {
+  0% {
+      width: 0;
+  }
+}
+.skill_progress .item:nth-of-type(1) .progress_level {
+  animation-delay: 0s;
+}
+.skill_progress .item:nth-of-type(2) .progress_level {
+  animation-delay: 0.2s;
+}
+.skill_progress .item:nth-of-type(3) .progress_level {
+  animation-delay: 0.4s;
+}
+.skill_progress .item:nth-of-type(4) .progress_level {
+  animation-delay: 0.6s;
+}
+.skill_progress .item:nth-of-type(5) .progress_level {
+  animation-delay: 0.8s;
+}
+.skill_progress .item:nth-of-type(6) .progress_level {
+  animation-delay: 1s;
+}
+
+#mokup_02 li .loading {
+  position: relative;
+  left: 60px;
+  top: 50px;
+}
 #mokup,
 #mokup_02 {
   display: flex;
   justify-content: center;
+}
+.loading {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.loading span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  animation: loading 1.5s infinite;
+}
+.loading span:nth-child(1) {
+  background: crimson;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+@keyframes loading {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    background: darkgoldenrod;
+    top: 0;
+    left: calc(100% - 10px);
+  }
+  50% {
+    background: darkgreen;
+    top: calc(100% - 10px);
+    left: calc(100% - 10px);
+  }
+  75% {
+    background: cadetblue;
+    top: calc(100% - 10px);
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
 }
 #mokup li:nth-child(2) {
   margin: 20px 0 0 30px;
@@ -136,18 +243,51 @@ body {
   margin: 100px auto 50px;
   text-align: center;
 }
+#text_02 .loading {
+  position: relative;
+  left: 330px;
+  top: 35px;
+}
 #design {
   width: 1200px;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
 }
+#design li {
+  position: relative;
+}
 #design li img {
   height: 400px;
 }
-#design li:hover img {
-  border: 2px dashed #f5ce6a;
+#design li:hover .poster_box {
+  opacity: 1;
+}
+#design li .poster_box {
+  height: 400px;
+  color: #fff;
+  background: #000000c9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  text-align: center;
   box-sizing: border-box;
+  opacity: 0;
+  transition: 0.5s;
+}
+#design li .poster_box p {
+  font-size: 18px;
+  margin: 80px 0;
+  line-height: 26px;
+}
+#design li .poster_box a {
+  padding: 7px;
+  background: gray;
+}
+#design li .poster_box a:hover {
+  background-color: #fff;
+  color: #000;
 }
 #text_03 {
   font-size: 30px;
@@ -156,6 +296,11 @@ body {
   max-width: 1000px;
   margin: 100px auto 50px;
   text-align: center;
+}
+#text_03 .loading {
+  position: relative;
+  left: 400px;
+  top: 38px;
 }
 #class {
   width: 1300px;
@@ -173,7 +318,7 @@ body {
   text-align: center;
   position: relative;
   padding: 20px 30px;
-  background: #219c89;
+  background: #015958;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
@@ -197,15 +342,6 @@ body {
   z-index: 2;
   display: none;
 }
-/* #popup:target {
-  display: block;
-}
-#popup_02:target {
-  display: block;
-}
-#popup_03:target {
-  display: block;
-} */
 #popup .pop,
 #popup_02 .pop,
 #popup_03 .pop {
@@ -233,5 +369,5 @@ body {
   right: 10px;
   bottom: 10px;
   font-size: 30px;
-  color: #219c89;
+  color: #015958;
 }
